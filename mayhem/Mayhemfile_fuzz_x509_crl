@@ -1,0 +1,9 @@
+project: savantenvs/GmSSL
+target: fuzz_x509_crl
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_x509_crl/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_x509_crl
+    libfuzzer: true
+    timeout: 10

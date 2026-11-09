@@ -1,0 +1,9 @@
+project: savantenvs/GmSSL
+target: fuzz_tls_record
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tls_record/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tls_record
+    libfuzzer: true
+    timeout: 10
