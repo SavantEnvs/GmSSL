@@ -1,0 +1,9 @@
+project: savantenvs/GmSSL
+target: fuzz_pem-mined-23375d1
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_pem-mined-23375d1/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_pem
+    libfuzzer: true
+    timeout: 10
