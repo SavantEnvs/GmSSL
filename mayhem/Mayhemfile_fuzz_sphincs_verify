@@ -1,0 +1,8 @@
+project: savantenvs/GmSSL
+target: fuzz_sphincs_verify-mined-70a1f99
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+cmds:
+  - cmd: /mayhem/fuzz_sphincs_verify
+    libfuzzer: true
+    timeout: 10
